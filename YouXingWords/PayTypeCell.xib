@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="61" id="KGk-i7-Jjw" customClass="PayTypeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v00-J1-Alc">
+                        <rect key="frame" x="15" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="5UW-rk-Bdq"/>
+                            <constraint firstAttribute="width" secondItem="v00-J1-Alc" secondAttribute="height" id="wn9-6B-EZJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信支付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1R-Y9-Msy">
+                        <rect key="frame" x="70" y="21" width="189" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_check.png" translatesAutoresizingMaskIntoConstraints="NO" id="WpD-OH-b0q">
+                        <rect key="frame" x="279" y="17" width="26" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="UdJ-OQ-7yH"/>
+                            <constraint firstAttribute="width" secondItem="WpD-OH-b0q" secondAttribute="height" constant="1" id="gaf-Uj-2RC"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="WpD-OH-b0q" secondAttribute="trailing" constant="15" id="C0D-kl-klO"/>
+                    <constraint firstItem="r1R-Y9-Msy" firstAttribute="leading" secondItem="v00-J1-Alc" secondAttribute="trailing" constant="15" id="KR6-8s-vdL"/>
+                    <constraint firstItem="WpD-OH-b0q" firstAttribute="leading" secondItem="r1R-Y9-Msy" secondAttribute="trailing" constant="20" id="UyG-Wa-ntD"/>
+                    <constraint firstItem="r1R-Y9-Msy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZGW-5u-WTU"/>
+                    <constraint firstItem="v00-J1-Alc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lAv-dl-Cyh"/>
+                    <constraint firstItem="WpD-OH-b0q" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pGI-Ps-9W2"/>
+                    <constraint firstItem="v00-J1-Alc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="qpy-aU-g95"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageCheck" destination="WpD-OH-b0q" id="iuv-Ow-ol1"/>
+                <outlet property="imageTitle" destination="v00-J1-Alc" id="VDB-6Q-FQ2"/>
+                <outlet property="lblTitle" destination="r1R-Y9-Msy" id="npz-AD-Q8B"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="62"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_check.png" width="200" height="200"/>
+    </resources>
+</document>

@@ -1,0 +1,252 @@
+
+a{
+  text-decoration: none;
+}
+*{
+  font-size:12px;
+}
+body{
+  height: 50%;
+  background:url(./images/barrier_bg@2x.png) repeat;
+  background-size:0.135rem;
+}
+p{
+  margin:0 0 5px !important;
+}
+.media{
+  margin-top:0 !important;
+}
+.youzuan{
+  display: block; width: 13px;  height: 13px;
+  margin-right: 5px;
+}
+.media-body{
+ padding-right: 10px !important;
+  text-align:center;
+}
+.youzan-body{
+  padding-right: 25px !important;
+  color:#ffe049;
+  font-size:12px;
+}
+#jxz{
+  margin-left: 13px;
+}
+.carinfor{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width:90px;
+  font-size:17px;
+  margin-top: 5px;
+}
+
+.sduty{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width:90px;
+  font-size:14px;
+  color:#c3c3c3;
+}
+
+.release{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width:73px;
+  font-size:12px !important;
+  color:#999;
+  margin-top: 4px;
+}
+
+
+.number{
+  position: absolute;
+  /*top: .45rem;*/
+  /*left: .35rem;*/
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  width: 50px;
+}
+.numbers{
+  position: absolute;
+  /*top: .45rem;*/
+  /*left: .45rem;*/
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  width: 50px;
+}
+.column-link-btn-qiang {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border: 1.6px solid #c8c8c8;
+  /* bottom: 28px; */
+  left: 12px;
+  font-size: 17px;
+  color: #333;
+  text-align: center;
+  line-height: 14px;
+  z-index: 90;
+  padding: 11px;
+  top: 20px;
+  background-color: #efefef;
+  border-radius: 50%;
+
+}
+.column-link-btn-num {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border: 1.6px solid #c8c8c8;
+  /* bottom: 28px; */
+  left: 12px;
+  font-size: 17px;
+  color: #333;
+  text-align: center;
+  line-height: 14px;
+  z-index: 90;
+  padding: 11px 4px;
+  top: 20px;
+  background-color: #efefef;
+  border-radius: 50%;
+
+}
+.ordcon{
+  background-color: #fff;
+  margin: 0 15px;
+  border-radius:16px;
+  height: 80%;
+  overflow: scroll;
+  position: fixed;
+}
+@media screen and (max-width: 414px) {
+  .sduty {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 113px;
+    font-size: 14px;
+    color: #c3c3c3;
+  }
+  .carinfor {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 140px;
+    font-size: 17px;
+    margin-top: 5px;
+  }
+
+}
+@media screen and (max-width: 375px) {
+  .sduty {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 113px;
+    font-size: 14px;
+    color: #c3c3c3;
+  }
+  .carinfor {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 130px;
+    font-size: 17px;
+    margin-top: 5px;
+  }
+
+}
+@media screen and (max-width: 412px) {
+  .sduty {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 113px;
+    font-size: 14px;
+    color: #c3c3c3;
+  }
+  .carinfor {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 140px;
+    font-size: 17px;
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .sduty {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 113px;
+    font-size: 14px;
+    color: #c3c3c3;
+  }
+  .carinfor {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 120px;
+    font-size: 17px;
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .number{
+    position: absolute;
+    /*top: .45rem;*/
+    /*left: .35rem;*/
+    height: 55px;
+    line-height: 53px;
+    text-align: center;
+    width: 48px;
+  }
+  .numbers{
+    position: absolute;
+    /*top: .45rem;*/
+    /*left: .45rem;*/
+    height: 55px;
+    line-height: 53px;
+    text-align: center;
+    width: 48px;
+  }
+  .carinfor{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width:80px;
+    font-size:17px;
+    margin-top: 5px;
+  }
+
+  .sduty{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width:90px;
+    font-size:14px;
+    color:#c3c3c3;
+  }
+  .ordcon {
+    height: 80%;
+  }
+}
+.ordtop:first-child{
+  padding:19px 0 10px 0;
+}
+
+.czimgnum {
+  display: block;
+  margin: 0 0.2rem 0 0;
+  float: left;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  margin-left: 59.5px;
+}

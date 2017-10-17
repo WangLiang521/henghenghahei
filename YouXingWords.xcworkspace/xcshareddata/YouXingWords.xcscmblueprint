@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0BB3862906912D78206BC3C7BB736B4BBCA957CB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "279A98A25C0426A46DC4A0733913441A1AD22340" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0BB3862906912D78206BC3C7BB736B4BBCA957CB" : 0,
+    "279A98A25C0426A46DC4A0733913441A1AD22340" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2C50E46C-A9D8-4422-9908-0A003C0366D1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0BB3862906912D78206BC3C7BB736B4BBCA957CB" : "YouxingIos\/",
+    "279A98A25C0426A46DC4A0733913441A1AD22340" : "youcan_iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "YouXingWords",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "YouXingWords\/YouXingWords.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.oschina.net\/better_dong\/YouxingIos.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0BB3862906912D78206BC3C7BB736B4BBCA957CB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/code.taobao.org\/svn\/youcan_iOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "279A98A25C0426A46DC4A0733913441A1AD22340"
+    }
+  ]
+}

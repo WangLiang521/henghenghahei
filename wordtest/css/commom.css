@@ -1,0 +1,289 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+}
+
+a {
+    color: #444;
+}
+
+    a:hover {
+        color: #333;
+    }
+
+    a:active {
+        color: #333;
+    }
+
+/*滚动条*/
+::-webkit-scrollbar {
+    width: 8px;
+    background: #eee;
+    height: 8px;
+}
+
+::-webkit-scrollbar-button {
+    height: 0;
+    width: 0;
+}
+
+::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.4);
+    border-radius: 4px;
+    position: absolute;
+}
+
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: rgba(0,0,0,.3);
+    }
+
+    ::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-thumb:active {
+        background-color: rgba(0,0,0,.5);
+    }
+
+    ::-webkit-scrollbar-thumb:horizontal {
+        border-width: 6px 1px 1px;
+        padding: 0 0 0 100px;
+        box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset -1px 0 0 rgba(0,0,0,.07);
+    }
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-track-piece {
+    background-clip: padding-box;
+    background-color: #eee;
+}
+
+    body::-webkit-scrollbar-track-piece:horizontal {
+        background-color: #eee;
+    }
+
+body::-webkit-scrollbar-corner {
+    background-clip: padding-box;
+    background-color: #eee;
+    border: solid #fff;
+    border-width: 3px 0 0 3px;
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.14);
+}
+
+
+/*导航条*/
+.navbar-fixed-top {
+    border: 0;
+}
+
+.sidebar {
+    display: none;
+    box-shadow: inset 0 0 10px #F1F1F1;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+    }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+    margin-right: -21px; /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+
+    .nav-sidebar > li > a {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .nav-sidebar > .active > a,
+    .nav-sidebar > .active > a:hover,
+    .nav-sidebar > .active > a:focus {
+        color: #fff;
+        background-color: #428bca;
+    }
+
+.main {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+.page-header {
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*左侧菜单*/
+.sidebar-menu {
+    border: 1px solid #ccc;
+    /* border: 0; */
+    box-shadow: 0 0 10px #ddd;
+    border-radius: 5px;
+    display: block;
+    zoom: 1;
+    overflow: auto;
+}
+/*一级菜单*/
+.menu-first {
+    height: 45px;
+    line-height: 45px;
+    background-color: #fff;
+    /* border-top: 1px solid #efefef; */
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0;
+    /*font-size: 14px;
+    font-weight: normal;*/
+    text-align: center;
+    display: block;
+    color: #333;
+    background-image: url(../lib/nav/jiantou_o.png);
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 15px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+    /*一级菜单鼠标划过状态*/
+    .menu-first:hover {
+        text-decoration: none;
+        background-color: #FDFDFD;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .menu-first:active {
+        text-decoration: none;
+    }
+/*二级菜单*/
+.menu-second li a {
+    background-color: #F7F7F7;
+    height: 31px;
+    line-height: 31px;
+    /* border-top: 1px solid #efefef; */
+    border-bottom: 1px solid #efefef;
+    /*font-size: 12px;*/
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+    /*二级菜单鼠标划过样式*/
+    .menu-second li a:hover {
+        text-decoration: none;
+        background-color: #ddd;
+        /*border-top: 1px solid #83ceed;*/
+        /* border-bottom: 1px solid #83ceed; */
+        border-right: 3px solid #f8881c;
+        border-left: 3px solid #f8881c;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .menu-second li a:active {
+        text-decoration: none;
+        background-color: #ddd;
+        border-right: 3px solid #f8881c;
+        border-left: 3px solid #f8881c;
+    }
+/*二级菜单选中状态*/
+.menu-second-selected {
+    background-color: #66c3ec;
+    height: 31px;
+    line-height: 31px;
+    border-top: 1px solid #83ceed;
+    border-bottom: 1px solid #83ceed;
+    border-right: 3px solid #f8881c;
+    border-left: 3px solid #66c3ec;
+    text-align: center;
+}
+/*覆盖bootstrap的样式*/
+.nav-list, .nav-list li a {
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu-first .collapsed {
+    background-image: url(../lib/nav/jiantou.png);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.hello {
+    text-shadow: 0px 0px 11px #fafafa;
+    padding: 10% 0;
+    color: #555;
+}
+
+
+.btn_filter {
+    border: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.text-center {
+    color: #fc553e;
+    padding-left: 0;
+}
+
+.list-group span {
+    color: #a6a6a6;
+}
+
+.list-color {
+    color: #FD2247;
+}
+
+.list-color-up {
+    color: #FD1A42;
+}
+
+.list-group-item {
+    border: 1px solid #C8C8C8;
+}
+
+
+
+
+
+

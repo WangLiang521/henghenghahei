@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"
+          name="viewport"/>
+
+    <title></title>
+
+    <!--bootstrap-->
+    <!--<link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="lib/jquery/bootstrap-3.3.5.min.css" rel="stylesheet"/>
+    <!--<link href="bootstrap/bootstrap.min.css" rel="stylesheet" />-->
+    <!--IE低版本插件-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src=" http />/cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/commom.css" rel="stylesheet"/>
+    <link href="css/word.css" rel="stylesheet"/>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>-->
+    <script src="lib/jquery/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+    <script src="lib/jquery/bootstrap-3.3.5.min.js"></script>
+    <!--layer-->
+    <script src="lib/layer/layer.js"></script>
+    <!--模板js-->
+    <script src="js/home.js"></script>
+    <script src="js/commom.js"></script>
+
+    <script src="js/wordInfos.json"></script>
+
+
+    <style type="text/css">
+        body {
+        background-color: #8ED9F6;
+        }
+
+
+        .btn-default:hover{
+         background-color:#ffffff;
+
+        }
+        button:focus{
+            outline: 0;
+        }
+        .btn:focus{
+        outline: 0;
+        }
+    </style>
+
+
+</head>
+
+<body style="height:100%;margin:0;padding:0;">
+<div class="panel panel-primary">
+    <!--<a href="#" class="close" data-dismiss="alert">
+        &times;
+    </a>
+     <div class="panel-heading">
+         <h3 class="panel-title">测测你的词汇量</h3>
+     </div>-->
+    <div class="panel-body titled">
+        <div class="panel-centent">
+            <div class="panel-centent-title">
+                <div><img src="image/icon.jpg"/><span>英语</span></div>
+                <div class="panel-word">三分钟测测你的词汇量</div>
+            </div>
+            <div class="panel-centent-cer">
+                <img src="image/centent.jpg">
+            </div>
+            <div style="padding-bottom:10px;" id="btn">
+
+                <button type="button" class="btn btn-info  btn-lg btn-block" id="btnLogins"
+                        style="margin:20px auto; width:80%;margin-left:27px;">开始测试
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-body title" style="display:none;">
+        <div class="panel-centents">
+            <div class="panel-centent-title">
+                <div class="progress">
+                    <div class="progress-bar" style="width:0%" id="bar"></div>
+                    <span class="sr-only" id="total"></span>
+
+                </div>
+                <div class="panel-words" id="explain"></div>
+                <div class="panel-words" id="egEN" style="font-size:20px;"></div>
+            </div>
+            <div style="padding-top:10px;padding-bottom:70px;" class="footer-btns">
+                <button type="button" class="btn btn-default  btn-lg btn-block btn-words" id="con1">
+                    <span class="panel-items"></span></button>
+                <button type="button" class="btn btn-default  btn-lg btn-block btn-words" id="con2">
+                    <span class="panel-items"></span></button>
+                <button type="button" class="btn btn-default  btn-lg btn-block btn-words" id="con3">
+                    <span class="panel-items"></span></button>
+                <button type="button" class="btn btn-default  btn-lg btn-block btn-words" id="con4">
+                    <span class="panel-items"></span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="titlesd" style="display:none">
+        <div class="panel-body-item">
+            <div class="panel-centent-item">
+                <div class="panel-centent-titles">
+                    <div style="font-size:6em;color:#fff;padding-top:15px;" id="fenshu"></div>
+                    <div style="font-size:2em;color:#fff;" id="cents"></div>
+                </div>
+                <div class="panel-centent-cers">
+                    <span id="sum"></span>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <img src="image/footer.jpg">
+
+            <div class="footer-btn" style=" margin-top:-3px;">
+                <!--<button type="button" class="btn btn-info  btn-lg btn-block" id="btnLogin" style="margin:20px auto; width:80%;margin-left:27px;">开始测试</button>-->
+                <div style=" width:40%;margin-left:30px;">
+                    <button type="button" class="btn btn-default  btn-lg btn-block"
+                            onclick="window.location.href='index.html'">重&nbsp;测
+                    </button>
+                </div>
+                <div style=" width:40%;margin-left:10px;">
+                    <button type="button" class="btn btn-info  btn-lg btn-block">分&nbsp;享</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--<div class="panel panel-primary" style="display:none;" id="title">-->
+<!--<a href="#" class="close" data-dismiss="alert">
+    &times;
+</a>
+<div class="panel-heading">
+    <h3 class="panel-title">测测你的词汇量</h3>
+</div>-->
+
+<!--</div>-->
+<script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $(".panel").find(".title").css("display", "block");
+                $(".panel").find(".titled").css("display", "none");
+            });
+            //var data = lll.data.length;
+            //if (7 == lll.data.length) {
+            //function asds() {
+            //    $(".btn-words").click(function () {
+            //        $(".panel").find(".titlesd").css("display", "block");
+            //        $(".panel").find(".title").css("display", "none");
+            //    });
+            //}
+            //var i = 0;
+            //var data = lll.data;
+            ////使用eval解析 获取json里的数据  
+            //if (i < data.length) {
+            //    var obj = eval(lll);
+            //    explains = obj.data[i].explain;
+            //    if (explains == "") {
+            //        $(".btn-words").click(function () {
+            //            $(".panel").find(".titlesd").css("display", "block");
+            //            $(".panel").find(".title").css("display", "none");
+            //        });
+            //    }
+            //}
+        });
+
+
+</script>
+
+
+</body>
+</html>
+
+
+<!--onclick="javascript:window.location.href='homess.html';"-->

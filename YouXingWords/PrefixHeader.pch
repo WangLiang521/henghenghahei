@@ -1,0 +1,312 @@
+//
+//  PrefixHeader.pch
+//  YouXingWords
+//
+//  Created by sunzhaokai on 16/8/2.
+//  Copyright © 2016年 孙赵凯. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#ifdef __OBJC__
+
+typedef enum {
+    AddFriendTypeFamily,
+    AddFriendTypeFriend} AddFriendType;
+
+
+//PK好友列表通知
+#define PKFriendList @"PKFriendList"
+//通讯录通知
+#define AddressNotification @"AddressNotification"
+
+#define WS(weakSelf) __weak __typeof(&*self)weakSelf = self;
+#import "UITableViewCell+SetData.h"
+
+#import "LGDHttpTool.h"
+
+#import "MJExtension.h"
+//网络请求类
+#import "NetWorkingUtils.h"
+//颜色转换类
+#import "UIColor+ColorChange.h"
+//页面布局类
+#import <Masonry.h>
+//自定义导航栏
+#import "CustomTitleView.h"
+//常用的工具类(自动消失的弹框，获取当前token等)
+#import "Utils.h"
+//网络图片加载类
+#import "UIImageView+WebCache.h"
+//添加下拉刷新框架
+#import "MJRefresh.h"
+
+#import "GDConfig.h"
+
+#import "EMSDK.h"
+
+#import "AnswerTools.h"
+
+#import "CountBytes.h"
+
+#import "BaiduMobStat.h"
+
+#import "MBProgressHUD+MJ.h"
+
+#import "UIView+LGDExtension.h"
+#import "LGDUtils.h"
+
+#import "CommonShare.h"
+
+
+#import "BaseViewController.h"
+#import <KVOController/NSObject+FBKVOController.h>
+
+/**
+ *  复习关id
+ */
+#define PassIdFuxiguan 0
+
+#import "UIImageView+WebCache.h"
+
+#define DefaultUserHeadImg @"message_icon_default"
+
+//屏幕宽度
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+//屏幕高度
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+
+#define is_3x ([UIScreen mainScreen].bounds.size.width==414)
+#define is_2x_and_320 ([UIScreen mainScreen].bounds.size.width==320)
+//746
+//1349
+#define KNOW_WH_TOH(w,h,w3x) (int)(w3x)*h/w
+//空隙转换
+#define trans2_3x(x) (int)((x)*0.55)  //320 375 414 除以UI w
+#define trans2_2x(x) (int)((x)*0.5)
+#define trans2_2x_320(x) (int)((x)*0.42)
+
+
+#define YXRECT3(x,y,w,h)  CGRectMake(trans2_3x(x), trans2_3x(y), trans2_3x(w), KNOW_WH_TOH(w, h, trans2_3x(w)))
+
+#define YXRECT2(x,y,w,h)  CGRectMake(trans2_2x(x), trans2_2x(y), trans2_2x(w), KNOW_WH_TOH(w, h, trans2_2x(w)))
+
+#define YXRECT2_320(x,y,w,h)  CGRectMake(trans2_2x_320(x), trans2_2x_320(y), trans2_2x_320(w), KNOW_WH_TOH(w, h, trans2_2x_320(w)))
+//使用直接按UI图给的xy长宽 会自动适配 但换算会有误差
+#define YXFrame(x,y,w,h) is_3x?YXRECT3((x),(y),(w),(h)):(is_2x_and_320?YXRECT2_320((x),(y),(w),(h)):YXRECT2((x),(y),(w),(h)))
+
+
+//单个的坐标或长宽转换 由UI图的px转化为屏幕pt
+#define AutoTrans(x) is_3x?(trans2_3x(x)):(is_2x_and_320?(trans2_2x_320(x)):(trans2_2x(x)))
+
+#import "Config.h"
+
+#define HYTAIJI @"HYTaiJiJ"
+#define HYCHAOCU @"HYChaoCuYuanJ"
+#define HYYUANDIE @"HYYuanDieF"
+#define YINBIAO @"Arial Hebrew"
+
+#import "SVProgressHUD.h"
+
+
+#ifdef DEBUG
+//基础接口@"http://192.168.1.12:1661/yc"
+#define BaseUrl                 @"http://word.jinyouapp.com/yc"
+//#define BaseUrl                 @"http://115.28.162.22:1881/yc"
+//杨克
+//#define BaseUrl                 @"http://192.168.1.12:1661/yc"
+//#define BaseUrl                 @"http://localhost:1669/yc"
+//#define BaseUrl                 @"http://192.168.1.150:1669/yc"
+#else
+
+//基础接口
+#define BaseUrl                 @"http://word.jinyouapp.com/yc"
+
+
+#endif
+
+
+
+/**
+ *  消息模块
+ */
+//1.1用户获取消息列表
+#define UserMsgList             BaseUrl@"/action/notice/list"
+//1.2查看用户/朋友信息
+#define UserInfo                BaseUrl@"/action/user/find/info"
+//1.3获取用户通讯录
+#define UserPhoneAdress         BaseUrl@"/action/contracts/list"
+//1.4删除通讯录中的好友
+#define DeleteFriend            BaseUrl@"/action/friend/del"
+//1.5修改朋友信息
+#define ReviseFriendInfo        BaseUrl@"/action/friend/modify"
+//1.6获取朋友申请列表
+#define NewFriendList           BaseUrl@"/action/notice/friend/list"
+//1.7同意朋友的申请
+#define AgreeAddFriend          BaseUrl@"/action/friend/agree"
+//1.8拒绝朋友的申请
+#define DisagreeAddFriend       BaseUrl@"/action/friend/disAgree"
+//1.9搜索用户
+#define SearchUser              BaseUrl@"/action/user/find/list"
+//1.10申请添加好友
+#define ApplyAddFriend          BaseUrl@"/action/friend/apply"
+//1.11获取每日战报列表
+#define GetReportList           BaseUrl@"/action/notice/report/list"
+//1.12获取擂台赛的列表
+#define GetContestList          BaseUrl@"/action/notice/contest/list"
+//1.13设置消息为已读
+#define SetMsgRead              BaseUrl@"/action/notice/read"
+
+
+/**
+ *  闯关模块
+ */
+//2.2关卡上锁列表
+#define LockListUrl             BaseUrl@"/action/pass/words/list"
+//2.1	获取用户今日学习情况
+#define timeRanking             BaseUrl@"/action/currDay/time/ranking"
+//2.4	提交用户的闯关信息
+#define SubmitInfo              BaseUrl@"/action/pass/words/submit"
+//2.5   统计用户的学习时间
+#define SubmitTime              BaseUrl@"/action/study/time/submit"
+//2.6   提交教材测试关卡的数据
+#define SubmitTest              BaseUrl@"/action/pass/test/submit"
+//2.7    获取教材的测试关卡信息
+#define BeforeTest              BaseUrl@"/action/pass/test/get"
+
+//2.8 复习关卡题目列表
+#define gdReviewListUrl             BaseUrl@"/action/pass/review/list"
+
+
+
+/**
+ *  PK模块
+ */
+//3.1.1好友排行榜
+#define FriendRank              BaseUrl@"/action/user/ranking"
+//3.1.2团体排行榜
+#define SchoolRank              BaseUrl@"/action/school/ranking"
+//3.2.1获取可以参加的擂台赛列表
+#define GetJoinContestList      BaseUrl@"/action/user/contest/list"
+//3.2.2报名参加擂台赛
+#define JoinContest             BaseUrl@"/action/user/contest/sign"
+//3.2.3请求开始答题
+#define StartAnswer             BaseUrl@"/action/user/contest/start"
+//3.2.4提交擂台赛的做题信息
+#define SubmitContestInfo       BaseUrl@"/action/user/contest/submit"
+//3.2.5查看擂台赛的排名信息
+#define WatchRankInfo           BaseUrl@"/action/user/contest/ranking"
+//3.3.1选择好友发起挑战
+#define ChooseFriendChange      BaseUrl@"/action/user/challenge"
+//3.3.2获取用户的PK列表
+#define GetUserPKList           BaseUrl@"/action/user/challenge/list"
+//3.3.3拒绝用户的PK邀请—通过PK列表
+#define RefuseUserPKByList      BaseUrl@"/action/user/challenge/cancel"
+//3.3.4拒绝用户的PK邀请—通过PK消息
+#define RsfuseUserPKByMsg       BaseUrl@"/action/notice/report/cancel"
+//3.3.5接受用户的PK邀请—通过PK列表
+#define AcceptUserPKByList      BaseUrl@"/action/user/challenge/agree"
+//3.3.6接受用户的PK邀请-通过PK消息
+#define AcceptUserPKByMsg       BaseUrl@"/action/notice/report/agree"
+
+#define TotleRecodePK           BaseUrl@"/action/user/meits/list"
+
+#define SuggestURL          BaseUrl@"/action/suggest/add"
+
+/**
+ *  我的模块
+ */
+//4.1.1登陆
+#define LoginUrl                BaseUrl@"/action/user/login/byPassword"
+//4.1.2获取用户信息
+#define GetUserInfo             BaseUrl@"/action/user/info"
+//4.1.3用户信息编辑
+#define UserModify              BaseUrl@"/action/user/info/modify"
+//4.1.4用户头像上传
+#define IconUpload              BaseUrl@"/action/user/avator/upload"
+//4.1.6推荐码
+#define ReferralCode            BaseUrl@"/action/user/referralCode"
+//4.2.1教材列表
+#define BookListUrl             BaseUrl@"/action/user/book/list"
+//4.2.3.1	错题界面选项获取
+#define  WrongOptions           BaseUrl@"/action/book/list/options2"
+//4.2.3.2	错题记录
+#define WrongList               BaseUrl@"/action/user/wrong/list"
+//4.3.1	积分任务
+#define CoinsPresent            BaseUrl@"/action/coins/present"
+//4.2.2	用户选择教材
+#define ChooseBook              BaseUrl@"/action/user/chose/book"
+//4.1.7	用户获取抽奖信息
+#define PrizeInfo              BaseUrl@"/action/user/prize/info"
+//4.1.7	用户抽奖
+#define UserPrize              BaseUrl@"/action/user/prize"
+//4.1.7	获取购买优钻列表
+#define CoinsBuyList              BaseUrl@"/action/coins/buy/list"
+//4.1.7	购买优钻
+#define GDURL_OrderPay              BaseUrl@"/action/coins/buy"
+//4.1.7	购买优钻回调
+#define GDURL_OrderPayBack              BaseUrl@"/action/coins/buy/notify"
+//4.1.8 签到
+#define GDURL_Qiandao              BaseUrl@"/action/user/sign"
+/**
+ *  积分任务
+ */
+#define TaskList BaseUrl@"/action/user/task/list"
+
+/**
+ *  用户获取优钻的记录
+ */
+#define CoinsGainsList BaseUrl@"/action/user/coins/gains/list"
+
+/**
+ *  用户消费优钻的列表
+ */
+#define CoinsUseHistoryList BaseUrl@"/action/user/coins/consume/list"
+
+/**
+ * 生成支付二维码（微信、支付宝）
+ */
+#define GDURL_GetQrCode BaseUrl@"/action/order/pay/qrcode"
+
+
+///**
+// * 订单支付
+// */
+//#define GDURL_OrderPay BaseUrl@"/action/order/pay/sign"
+//
+///**
+// * 订单支付支付成功后回调（√）
+// */
+//#define GDURL_OrderPayBack BaseUrl@"/action/order/pay/callback"
+
+
+
+
+
+#define BaiLife_GetTelCode_Url              BaseUrl@"/action/user/passwdMod/getTelCode"
+#define BaiLife_ChangePassword_Url              BaseUrl@"/action/user/passcode/mod"
+
+
+#define BaiLife_GetRegisterTelCode_Url              BaseUrl@"/action/user/reg/getCode"
+#define BaiLife_Register_Url              BaseUrl@"/action/user/reg"
+
+
+#define GetTelCodeRegister_Url              BaseUrl@"/action/user/passwdMod/getTelCode"
+#define GetTelCodeChangePassword_Url              BaseUrl@"/action/user/passwdMod/getTelCode"
+#define RegisterUrl              BaseUrl@"/action/user/passcode/mod"
+#define ChangePasswordUrl              BaseUrl@"/action/user/passcode/mod"
+
+#import "FileManagerHelper.h"
+
+// 定义一个加上'w'前缀的weak变量，比如 DEFINE_WEAK(self)会生成 wself
+#define DEFINE_WEAK(variable) __weak typeof(variable) w##variable = variable;
+
+#endif
+
+
+
+
+#endif /* PrefixHeader_pch */

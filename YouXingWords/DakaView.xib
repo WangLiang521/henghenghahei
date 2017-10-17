@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DakaView">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="172"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrier_bg_share_daka.png" translatesAutoresizingMaskIntoConstraints="NO" id="ik5-kp-bRe">
+                    <rect key="frame" x="0.0" y="22" width="355" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ik5-kp-bRe" secondAttribute="height" multiplier="161:68" id="KV2-kV-qJD"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrier_icon_title_pass_share.png" translatesAutoresizingMaskIntoConstraints="NO" id="dfC-oE-4mM">
+                    <rect key="frame" x="74" y="0.0" width="207" height="51.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="dfC-oE-4mM" secondAttribute="height" multiplier="173:43" id="9I5-gv-1jX"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrier_txt_share.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Yl-aa-h26">
+                    <rect key="frame" x="114" y="58.5" width="127" height="12"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="9Yl-aa-h26" firstAttribute="top" secondItem="dfC-oE-4mM" secondAttribute="bottom" constant="7" id="EbV-KR-FKq"/>
+                <constraint firstItem="dfC-oE-4mM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="StB-Ie-R2t"/>
+                <constraint firstAttribute="bottom" secondItem="ik5-kp-bRe" secondAttribute="bottom" id="W5s-fc-tG9"/>
+                <constraint firstItem="9Yl-aa-h26" firstAttribute="centerX" secondItem="dfC-oE-4mM" secondAttribute="centerX" id="YF2-o5-UIY"/>
+                <constraint firstAttribute="trailing" secondItem="dfC-oE-4mM" secondAttribute="trailing" constant="74" id="epq-U9-Olt"/>
+                <constraint firstItem="ik5-kp-bRe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sPY-Km-rQU"/>
+                <constraint firstItem="dfC-oE-4mM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="74" id="vGM-Mm-NVR"/>
+                <constraint firstAttribute="trailing" secondItem="ik5-kp-bRe" secondAttribute="trailing" id="zZn-x1-wOC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageBack" destination="ik5-kp-bRe" id="WPN-cS-eof"/>
+                <outlet property="imageDaka" destination="dfC-oE-4mM" id="3cA-s4-gs9"/>
+                <outlet property="imageText" destination="9Yl-aa-h26" id="FMs-o8-qXt"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="54"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="barrier_bg_share_daka.png" width="321" height="135"/>
+        <image name="barrier_icon_title_pass_share.png" width="173" height="43"/>
+        <image name="barrier_txt_share.png" width="127" height="12"/>
+    </resources>
+</document>
